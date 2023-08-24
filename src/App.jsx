@@ -1,14 +1,18 @@
+import Cabecalho from './components/Cabecalho'
+import Secao from './components/Secao'
+import Rodape from './components/Rodape'
+import viteLogo from './assets/vite.svg'
+
 
 export default function App(){
 
-  // Area declarativa
-  let nome = 'Joao';
-
+  let viteAtl = 'Vite Logo'
   return(
     <>
-
-      {/* Area Imperativa */}
-      <p>Ola {nome}</p>
+      <Cabecalho />
+      <Secao  viteLogoProps={viteLogo} viteAtlProps={viteAtl}/>
+      <Rodape />
+      
 
     </>
   );
