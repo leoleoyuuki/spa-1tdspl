@@ -26,6 +26,17 @@ export default function Secao(props) {
       </p>
       <img src={reactLogo} alt={reactAlt} />
       <img src={props.viteLogoProps} alt={props.viteAltProps} />
+
+      <div>
+          <h2>Lista de Nomes</h2>
+          <ul>
+              {props.nomesProps.map((nome, indice) =>(
+                  <li key={indice}>{nome}</li>
+              )
+
+              )}
+          </ul>
+      </div>
     </div>
   </section>
     </>
