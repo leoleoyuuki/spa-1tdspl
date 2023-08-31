@@ -1,8 +1,6 @@
-import Cabecalho from './components/Cabecalho'
-import Secao from './components/Secao'
 import Rodape from './components/Rodape'
-import viteLogo from './assets/vite.svg'
 import Lista from './components/Lista'
+import { Outlet } from 'react-router-dom';
 
 
 export default function App(){
@@ -13,7 +11,7 @@ export default function App(){
   return(
     <>
       <Lista/>
-      <Secao  viteLogoProps={viteLogo} viteAtlProps={viteAtl} nomesProps={nomes}/>
+        <Outlet/>
       <Rodape />
       
 

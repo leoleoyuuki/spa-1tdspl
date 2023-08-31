@@ -14,6 +14,7 @@ import Produtos from './routes/produtos.jsx';
 
 const router = createBrowserRouter([
   {path: '/', element: <App/>, 
+    errorElement: <Erro404/>,
     children: [
       {path: '/', element: <Home/>},
       {path: '/produtos', element: <Produtos/>},
