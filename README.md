@@ -22,4 +22,4 @@ este objeto vai ter os seguintes atributos: id, nome, preco e descricao.
 - Recuperando a lista de produtos do arquivo ListaProdutos.jsx e adicionando no 
 estado do componente Produtos.
 - Em Produtos vamos criar um tabela pra exibir os produtos e adicionar link para editar produto.
-- Adicionando CSS inline nos elementos da tabela com style objects.
+- Adicionando CSS inline nos elementos da tabela com style obje
