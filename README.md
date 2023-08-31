@@ -16,3 +16,4 @@ createBrowserRouter e RouterProvider
 - Criando o objeto de rotas e adicionando apenas a rota App e exibindo com o RouterProvider.
 - Adicionando o atributo children no objeto de rotas e adicionar as rotas Home,
 Produtos,  EditarProdutps e Erro404
+- Criando rotas com o componente Link.
