@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom"
 import { ListaProdutos } from "../components/ListaProdutos"
 
 export default function Produtos(){
@@ -14,6 +15,7 @@ export default function Produtos(){
                     <th style={{border:"2px solid #fff"}}>Nome</th>
                     <th style={{border:"2px solid #fff"}}>Descricao</th>
                     <th style={{border:"2px solid #fff"}}>Preco</th>
+                    <th style={{border:"2px solid #fff"}}>Editar</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +25,9 @@ export default function Produtos(){
                         <td style={{border:"2px solid #fff"}}>{produto.nome}</td>
                         <td style={{border:"2px solid #fff"}}>{produto.desc}</td>
                         <td style={{border:"2px solid #fff"}}>{produto.preco}</td>
+                        <td style={{border:"2px solid #fff"}}>
+                            <Link to={`/editar/produtos/${produto.id}`}>Editar</Link>
+                        </td>
                     </tr>
                 ))}
             </tbody>
