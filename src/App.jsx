@@ -5,8 +5,6 @@ import { Outlet } from 'react-router-dom';
 
 export default function App(){
 
-  let viteAtl = 'Vite Logo'
-  let nomes = ['Leo', 'Yuuki', 'Santos']
 
   return(
     <>
