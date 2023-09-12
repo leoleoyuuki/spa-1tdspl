@@ -1,0 +1,17 @@
+.estilo{
+    border-collapse: collapse;
+    border: 2px solid #ccc;
+
+    .tableHeader{
+        border: 1px solid #000;
+        text-align: center;
+    }
+    .tableLine:hover{
+        background-color: #ccc;
+    }
+    .tableData{
+        border: 1px solid #000;
+        
+    
+    }
+}
