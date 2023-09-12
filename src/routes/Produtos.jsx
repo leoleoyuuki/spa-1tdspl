@@ -11,21 +11,21 @@ export default function Produtos(){
         <table style={{borderCollapse:"collapse" , border:"2px solid #fff"}}>
             <thead>
                 <tr style={{ border:"2px solid #fff"}}>
-                    <th style={{border:"2px solid #fff"}}>Id</th>
-                    <th style={{border:"2px solid #fff"}}>Nome</th>
-                    <th style={{border:"2px solid #fff"}}>Descricao</th>
-                    <th style={{border:"2px solid #fff"}}>Preco</th>
-                    <th style={{border:"2px solid #fff"}}>Editar</th>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Descricao</th>
+                    <th>Preco</th>
+                    <th>Editar</th>
                 </tr>
             </thead>
             <tbody>
                 {ListaProdutos.map((produto, indice)=>(
                     <tr key={indice}>
-                        <td style={{border:"2px solid #fff"}}>{produto.id}</td>
-                        <td style={{border:"2px solid #fff"}}>{produto.nome}</td>
-                        <td style={{border:"2px solid #fff"}}>{produto.desc}</td>
-                        <td style={{border:"2px solid #fff"}}>{produto.preco}</td>
-                        <td style={{border:"2px solid #fff"}}>
+                        <td>{produto.id}</td>
+                        <td>{produto.nome}</td>
+                        <td>{produto.desc}</td>
+                        <td>{produto.preco}</td>
+                        <td>
                             <Link to={`/editar/produtos/${produto.id}`}>Editar</Link>
                         </td>
                     </tr>
