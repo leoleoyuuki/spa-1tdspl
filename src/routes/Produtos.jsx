@@ -11,32 +11,34 @@ export default function Produtos(){
         <p>Os melhores produtos mercado</p>
 
         <table className={classes.estilo}>
-            <thead>
+            <thead className={classes.tableHeaders}>
                 <tr>
-                    <th className={classes.tableHeader}>Id</th>
-                    <th className={classes.tableHeader}>Nome</th>
-                    <th className={classes.tableHeader}>Descricao</th>
-                    <th className={classes.tableHeader}>Preco</th>
-                    <th className={classes.tableHeader}>Editar</th>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Descricao</th>
+                    <th>Preco</th>
+                    <th>Imagem</th>
+                    <th>Editar</th>
                 </tr>
             </thead>
             <tbody>
                 {ListaProdutos.map((produto, indice)=>(
                     <tr key={indice} className={classes.tableLine}>
-                        <td className={classes.tableData}>{produto.id}</td>
-                        <td className={classes.tableData}>{produto.nome}</td>
-                        <td className={classes.tableData}>{produto.desc}</td>
-                        <td className={classes.tableData}>{produto.preco}</td>
-                        <td className={classes.tableData}>
+                        <td>{produto.id}</td>
+                        <td>{produto.nome}</td>
+                        <td>{produto.desc}</td>
+                        <td>{produto.preco}</td>
+                        <td><img src={produto.img} alt={produto.desc} /></td>
+                        <td>
                             <Link to={`/editar/produtos/${produto.id}`}><Editar/></Link>
                             
                         </td>
                     </tr>
                 ))}
             </tbody>
-            <tfoot>
+            <tfoot className={classes.tableFooter}>
                 <tr>
-                    <td colSpan={3}>Produtos</td>
+                    <td colSpan={6}>Produtos</td>
                 </tr>
             </tfoot>
         </table>
