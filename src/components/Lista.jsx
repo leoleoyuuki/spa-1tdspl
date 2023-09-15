@@ -1,4 +1,6 @@
 import Cabecalho from "./Cabecalho";
+import {Link} from "react-router-dom";
+
 export default function Lista(){
 
     return(
@@ -7,13 +9,10 @@ export default function Lista(){
             <Cabecalho>
             
             <li>
-                <a href="#">Item-1</a>
+                <span><Link to="/">Home</Link></span>
             </li>
             <li>
-                <a href="#">Item-2</a>
-            </li>
-            <li>
-                <a href="#">Item-3</a>
+                <span><Link to="/produtos">Produtos</Link></span>
             </li>
             </Cabecalho>
         </>
