@@ -3,7 +3,7 @@ import classes from "./Produtos.module.css";
 import { AiFillEdit as Editar } from "react-icons/ai";
 import { RiDeleteBin2Fill as Excluir } from "react-icons/ri";
 import { useEffect, useState } from "react";
-import ModalInserir from "../components/ModalInserir";
+import ModalInserir from "../components/ModalInserir/ModalInserir";
 
 
 export default function Produtos() {
