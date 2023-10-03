@@ -5,13 +5,15 @@ import { RiDeleteBin2Fill as Excluir } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import ModalInserir from "../components/ModalInserir/ModalInserir";
 
-
 export default function Produtos() {
+  
   document.title = "Lista de Produtos: ";
 
   const [listaProdutoExterno, setListaProdutoExterno] = useState([{}]);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
+    if(!open) {
     fetch("http://localhost:5000/produtos", {
       method: "GET",
       headers: {
@@ -21,16 +23,19 @@ export default function Produtos() {
       .then((response) => response.json())
       .then((data) => setListaProdutoExterno(data))
       .catch((error) => console.log(error));
-  }, []);
+    }
+  }, [open]);
 
-  const[open,setOpen] = useState(false);
 
   return (
     <div>
       <h1>Produtos de INFORMÁTICA - FIPAPI</h1>
       <p>Os Melhores Produtos do Mercado</p>
-        {open ? <ModalInserir open = {open} setOpen={setOpen}/> : ""}
-        <button onClick={()=>setOpen(true)}>Open Modal</button>
+
+      {open ? <ModalInserir open={open} setOpen={setOpen}/> : ""}
+
+      <Link onClick={()=> setOpen(true)}>Cadastro de Produtos</Link>
+
       <table className={classes.estilo}>
         <thead className={classes.tableHeaders}>
           <tr>
