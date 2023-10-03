@@ -1,6 +1,6 @@
 import Rodape from './components/Rodape'
-import Lista from './components/Lista'
 import { Outlet } from 'react-router-dom';
+import Cabecalho from './components/Cabecalho/Cabecalho';
 
 
 export default function App(){
@@ -8,7 +8,7 @@ export default function App(){
 
   return(
     <>
-      <Lista/>
+      <Cabecalho/>
         <Outlet/>
       <Rodape />
       
